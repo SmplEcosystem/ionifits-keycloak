@@ -1,0 +1,26 @@
+version: '3'
+services:
+  SmplIdentity:
+    image: registry.digitalocean.com/smplfinance-image-registry/identity-provider-service:1.0.1
+    depends_on:
+      - auth-db
+    environment:
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: admin
+      DB_ADDR: auth-db
+      DB_PASSWORD: keycloak
+      DB_USER: keycloak
+      DB_VENDOR: mariadb
+      DB_PORT: 3306
+    ports:
+      - "8080:8080"
+      - "9990:9000"
+  auth-db:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_USER: keycloak
+      MYSQL_PASSWORD: keycloak
+      MYSQL_DATABASE: keycloak
+    volumes:
+      - ./keycloak-dev-init.sql:/docker-entrypoint-initdb.d/keycloak-dev-init.sql
