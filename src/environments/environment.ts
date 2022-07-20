@@ -18,18 +18,18 @@ export const environment = {
 
 export const auth0NativeConfig: IonicAuthOptions = {
   // the auth provider
-  authConfig: 'auth0',
+  authConfig: 'keycloak',
   // The platform which we are running on
   platform: 'capacitor',
   // client or application id for provider
-  clientID: 'ihSRqLLa2z33PTyeNNlI2uxgsqorb08l',
+  clientID: 'SmplWalletUi',
   // the discovery url for the provider
   // OpenID configuration
-  discoveryUrl: 'https://ionicorg.auth0.com/.well-known/openid-configuration',
+  discoveryUrl: 'http://10.0.2.2:8080/auth/realms/SmplFinance/.well-known/openid-configuration',
   // the URI to redirect to after log in
   redirectUri: 'ionifits://login',
   // requested scopes from provider
-  scope: 'openid offline_access email picture profile',
+  scope: 'offline_access email profile',
   // the audience, if applicable
   audience: 'https://api.myapp.com',
   // the URL to redirect to after log out
@@ -44,18 +44,22 @@ export const auth0NativeConfig: IonicAuthOptions = {
 
 export const auth0WebConfig: IonicAuthOptions = {
   // the auth provider
-  authConfig: 'auth0',
+  // authConfig: 'auth0',
+  authConfig: 'keycloak',
   // The platform which we are running on
   platform: 'web',
   // client or application id for provider
-  clientID: 'ihSRqLLa2z33PTyeNNlI2uxgsqorb08l',
+  // clientID: 'ihSRqLLa2z33PTyeNNlI2uxgsqorb08l',
+  clientID: 'SmplWalletUi',
   // the discovery url for the provider
   // OpenID configuration
-  discoveryUrl: 'https://ionicorg.auth0.com/.well-known/openid-configuration',
+  // discoveryUrl: 'https://ionicorg.auth0.com/.well-known/openid-configuration',
+  discoveryUrl: 'http://localhost:8080/auth/realms/SmplFinance/.well-known/openid-configuration',
   // the URI to redirect to after log in
   redirectUri: 'http://localhost:8100/login',
   // requested scopes from provider
-  scope: 'openid offline_access email picture profile',
+  // scope: 'openid offline_access email picture profile',
+  scope: 'offline_access email profile',
   // the audience, if applicable
   audience: 'https://api.myapp.com',
   // the URL to redirect to after log out
@@ -67,5 +71,6 @@ export const auth0WebConfig: IonicAuthOptions = {
   // multiple apps.
   iosWebView: 'private',
   implicitLogin: 'CURRENT'
+  // webAuthFlow: 'PKCE'
 };
 

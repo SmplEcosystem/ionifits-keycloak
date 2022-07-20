@@ -16,6 +16,7 @@ export class AuthenticationService extends IonicAuth {
   constructor(router: Router, identityService: IdentityService) {
       // Determine whether to run on mobile or the web
       const selectedConfig = Capacitor.isNativePlatform() ? auth0NativeConfig : auth0WebConfig;
+      console.log('in AuthenticationService selectedConfig', selectedConfig);
       selectedConfig.tokenStorageProvider = identityService.vault;
       super(selectedConfig);
 
@@ -31,6 +32,7 @@ export class AuthenticationService extends IonicAuth {
 
      // Event fired by Auth Connect upon successful login to auth provider.
     async onLoginSuccess(response: any) {
+      console.log('auth service, success', response);
       await this.router.navigate(['tabs/employees']);
 
       // Implicit login: POPUP flow

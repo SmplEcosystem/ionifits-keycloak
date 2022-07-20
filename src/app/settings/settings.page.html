@@ -10,7 +10,7 @@
 <ion-content>
   <ion-list-header>
     <ion-label class="ion-text-uppercase" color="ios-lh-labl-gray">
-      User Details
+      User Details bob
     </ion-label>
   </ion-list-header>
   <ion-list *ngIf="user">
@@ -19,7 +19,7 @@
         <img src="{{ user.picture }}" />
       </ion-avatar>
       <ion-label>
-        <h2>{{ user.name }}</h2>
+        <h2>{{ user.name }}{{authed$ | async}}</h2>
         <p>{{ user.email }}</p>
       </ion-label>
       <div class="center">
@@ -35,7 +35,7 @@
 
   <ion-list-header>
     <ion-label class="ion-text-uppercase" color="ios-lh-labl-gray">
-      Communications
+      Communications and stuff
     </ion-label>
   </ion-list-header>
   <ion-list>
