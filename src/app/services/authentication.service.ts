@@ -4,6 +4,7 @@ import {Router} from '@angular/router';
 // import {IdentityService} from './identity.service';
 import {Capacitor} from '@capacitor/core';
 import {auth0NativeConfig, auth0WebConfig} from '../../environments/environment';
+import {decodeToken} from '../../decode-jwt';
 
 @Injectable({
     providedIn: 'root'
@@ -13,8 +14,10 @@ export class AuthenticationService extends IonicAuth {
     private router: Router;
     private loadingIndicator: HTMLIonLoadingElement;
 
+    private idToken;
+
     // constructor(router: Router, identityService: IdentityService) {
-        constructor(router: Router) {
+    constructor(router: Router) {
         // Determine whether to run on mobile or the web
         const selectedConfig = Capacitor.isNativePlatform() ? auth0NativeConfig : auth0WebConfig;
         console.log('in AuthenticationService selectedConfig', selectedConfig);
@@ -35,9 +38,11 @@ export class AuthenticationService extends IonicAuth {
     async onLoginSuccess(response: any) {
         console.log('auth service, success', response);
 
-        console.log('isAuthenticated isAccessTokenAvailable', await super.isAccessTokenAvailable());
-        console.log('isAuthenticated isAccessTokenExpired', await super.isAccessTokenExpired());
-        console.log('isAuthenticated getRefreshToken', await super.getRefreshToken());
+        this.idToken = decodeToken(response.idToken);
+
+        console.log('onLoginSuccess isAccessTokenAvailable', await super.isAccessTokenAvailable());
+        console.log('onLoginSuccess isAccessTokenExpired', await super.isAccessTokenExpired());
+        console.log('onLoginSuccess getRefreshToken', await super.getRefreshToken());
 
         await this.router.navigate(['tabs/employees']);
 

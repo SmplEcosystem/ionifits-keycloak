@@ -19,7 +19,6 @@ def capacitor_pods
   pod 'IonicEnterpriseApplePay', :path => '../../node_modules/@ionic-enterprise/apple-pay'
   pod 'IonicEnterpriseGooglePay', :path => '../../node_modules/@ionic-enterprise/google-pay'
   pod 'CordovaPlugins', :path => '../capacitor-cordova-ios-plugins'
-  pod 'CordovaPluginsStatic', :path => '../capacitor-cordova-ios-plugins'
 end
 
 target 'App' do

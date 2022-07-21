@@ -29,7 +29,7 @@ export const auth0NativeConfig: IonicAuthOptions = {
   // the URI to redirect to after log in
   redirectUri: 'ionifits://login',
   // requested scopes from provider
-  scope: 'offline_access email profile',
+  scope: 'offline_access email profile openid',
   // the audience, if applicable
   audience: 'https://api.myapp.com',
   // the URL to redirect to after log out
@@ -59,7 +59,7 @@ export const auth0WebConfig: IonicAuthOptions = {
   redirectUri: 'http://localhost:8100/login',
   // requested scopes from provider
   // scope: 'openid offline_access email picture profile',
-  scope: 'offline_access email profile',
+  scope: 'offline_access email profile openid',
   // the audience, if applicable
   audience: 'https://api.myapp.com',
   // the URL to redirect to after log out

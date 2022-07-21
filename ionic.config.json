@@ -1,7 +1,15 @@
 {
   "name": "Ionifits",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "enterprise": {
+      "keyId": 8133,
+      "productKey": "key_73070870387c45a6ab563f8e6192f625",
+      "appId": "8fc3a874",
+      "registries": [
+        "@ionic-enterprise;https://registry.ionicframework.com/"
+      ]
+    }
   },
   "type": "angular",
   "id": "34df4710"

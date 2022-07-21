@@ -327,6 +327,13 @@
   dependencies:
     "@types/cordova" latest
 
+"@awesome-cordova-plugins/ionic-webview@^5.44.0":
+  version "5.44.0"
+  resolved "https://registry.yarnpkg.com/@awesome-cordova-plugins/ionic-webview/-/ionic-webview-5.44.0.tgz#37c5c890c9c7da0c79171df42eabec699fd1e794"
+  integrity sha512-W/y8gzs5NcmU8/dox2Bvx1aY2Da+fEVGOKEdjwU/QVUHFHqoG71BlLS7LRiKV35FIeZ9JuyZ9DshWdls6XjC2Q==
+  dependencies:
+    "@types/cordova" latest
+
 "@awesome-cordova-plugins/sqlite@^5.43.0":
   version "5.44.0"
   resolved "https://registry.yarnpkg.com/@awesome-cordova-plugins/sqlite/-/sqlite-5.44.0.tgz#29c275eb1d042ce77d66f12b36febcf92f7b27dd"
@@ -3296,6 +3303,11 @@ copy-webpack-plugin@^6.2.1:
     schema-utils "^3.0.0"
     serialize-javascript "^5.0.1"
     webpack-sources "^1.4.3"
+
+cordova-plugin-ionic-webview@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/cordova-plugin-ionic-webview/-/cordova-plugin-ionic-webview-5.0.0.tgz#d58741af85754d80da82c7f673842a3e71bde630"
+  integrity sha512-Wq0kCanxubK/JroTW4Mp5soayScnRyiY1eCkbwiz1Dyt1xHOiOW/v+1miqtBHtnZhcXw25TulCKAVJzkNBdmyg==
 
 cordova-plugin-ionic@^5.5.2:
   version "5.5.2"
