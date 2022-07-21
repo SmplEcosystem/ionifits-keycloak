@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthenticationService} from '../services/authentication.service';
-import {IdentityService} from '../services/identity.service';
+// import {IdentityService} from '../services/identity.service';
 import {LoadingController, ModalController, IonRouterOutlet} from '@ionic/angular';
 import {Router} from '@angular/router';
 import {ImplementationModalPage} from '../implementation-modal/implementation-modal.page';

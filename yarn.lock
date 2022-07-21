@@ -1396,13 +1396,6 @@
   dependencies:
     "@capacitor/cli" "^3.1.1"
 
-"@ionic-enterprise/identity-vault@^5.1.1":
-  version "5.9.0"
-  resolved "https://registry.ionicframework.com/@ionic-enterprise%2fidentity-vault/-/identity-vault-5.9.0.tgz#2ca059492cbb63b9dcaee32a123359e5984623ed"
-  integrity sha512-nJ17bUCVZqCq6owTvZfIsecg2frysbRGpNL23AyLXgAZPhfEuN4qgbA7HXyRPRMFfvhn1VcZXCdylhIeaQH6WA==
-  dependencies:
-    tslib "^1.9.0"
-
 "@ionic-enterprise/secure-storage@^2.1.1":
   version "2.3.2"
   resolved "https://registry.ionicframework.com/@ionic-enterprise%2fsecure-storage/-/secure-storage-2.3.2.tgz#7de1d2df28504ff5cbbd9855a60410f7b365c64a"
